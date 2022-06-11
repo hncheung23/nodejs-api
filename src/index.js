@@ -78,7 +78,7 @@ app.get('/incidents', async (req, res) => {
 // start the in-memory MongoDB instance
 startDatabase().then(async () => {
     // start the server
-    app.listen(3001, async () => {
-        console.log('listening on port 3001');
+    app.listen(9000, async () => {
+        console.log('listening on port 9000');
     });
 });
