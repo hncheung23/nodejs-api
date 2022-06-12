@@ -14,3 +14,6 @@ I am using nodejs with express and axios to make the api call. With the help of 
 
 Paragraph on how you would enhance this code if you needed it to run in production
 
+1. We can set the correct status code for that in the response. If the everything is okay, we can return status code 2xx. If the request cannot be fulfilled because of a client error (like requesting a resource that does not exist), we can return 4xx.
+2. Conduct a black-box testing on api call. We can examine the functionality of an application without the knowledge of its internal structures or workings. Therefore none of the dependencies are mocked, but the system is tested as a whole.
+3. Enforce rate limiting for controlling how many requests a given consumer can send to the API. For example, we can use X-Rate-Limit-Limit to control the number of requests allowed in a given time interval in order to prevent overload of server.
