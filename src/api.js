@@ -1,3 +1,4 @@
+const HOST = 'https://incident-api.use1stag.elevatesecurity.io'
 const axios = require('axios');
 const { setupCache } = require('axios-cache-adapter')
 require('dotenv').config();
@@ -15,7 +16,7 @@ const api = axios.create({
 async function getDenial() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/denial/',
+        url: `${HOST}/incidents/denial`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -37,7 +38,7 @@ async function getIntrusion() {
 async function getExecutable() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/executable/',
+        url: `${HOST}/incidents/executable`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -48,7 +49,7 @@ async function getExecutable() {
 async function getMisuse() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/misuse/',
+        url: `${HOST}/incidents/misuse`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -59,7 +60,7 @@ async function getMisuse() {
 async function getUnauthorized() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/unauthorized/',
+        url: `${HOST}/incidents/unauthorized`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -70,7 +71,7 @@ async function getUnauthorized() {
 async function getProbing() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/probing/',
+        url: `${HOST}/incidents/probing`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -81,7 +82,7 @@ async function getProbing() {
 async function getOther() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/incidents/other/',
+        url: `${HOST}/incidents/other`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
@@ -92,7 +93,7 @@ async function getOther() {
 async function getIdentities() {
     return api({
         method: 'get',
-        url: 'https://incident-api.use1stag.elevatesecurity.io/identities',
+        url: `${HOST}/identities`,
         auth: {
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
